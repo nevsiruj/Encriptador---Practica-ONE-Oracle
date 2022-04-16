@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" src="css/style.css" type="text/css"> -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="models/img/vector.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+    <title>Challenge</title>
+</head>
+
+<body>
+    <!-- <h1> Ingrese el texto aqui</h1> -->
+
+    <div class="logo">
+        <img id="logo" src="models\img\vector.png">
+    </div>
+
+    <div class="txtarea">
+            <textarea id="entrada" placeholder="Ingrese el texto aqui"></textarea>
+    </div>
+    <div class="info">
+    <img id="imgAdv" src="models\img\adv.png"> 
+    <p id="txt0">  Solo letras minúsculas y sin acentos </p>
+</div>
+    
+    <div class="botones">
+        
+        <button class="button-encriptar" type="button" onclick="uiEncriptar2()">
+            <p id="text-encriptar">Encriptar</p>
+        </button>
+
+        <button class="button-desencriptar" type="button" onclick="uiDesencriptar() ">
+            <p id="text-desencriptar">Desencriptar</p>
+        </button>
+
+    
+    </div>
+    
+    
+    <div class="txtAreaOut">
+       
+        <img id="muñeco"  src="models\img\Muñeco.png">
+        <h2 id="txt1">Ningún mensaje fue encontrado</h2>
+        <textarea readonly id="txt2" >Ingresa el texto que desees encriptar o desencriptar.</textarea>
+   
+        <div id="copyAcc" class="invisible">  
+            <button id="copy" class="invisible" type="button" onclick="copyToClipBoard()">
+                <p id="text-copy">Copiar</p>
+            </button>
+         </div> 
+    </div>
+
+    <div class="footer"></div>
+
+    <script src="controller\encripted.js"></script>
+    </body>
+
+</html>
