@@ -18,7 +18,7 @@ h1 {
 }
 
 #entrada {
-    width: 680px;
+    width: 100%;
     height: 700px;
     color: #0A3871;
     background: #E5E5E5;
@@ -45,12 +45,12 @@ h1 {
 
 .txtAreaOut {
     position: absolute;
-    width: 400px;
+    width: 375px;
     height: 944px;
     left: 1000px;
     top: 40px;
-    /* border-bottom: 40px;  */
-    /* margin-bottom: 50px; */
+    border-bottom: 40px;
+    margin-bottom: 50px;
     padding: 50px 20px 20px 20px;
 
 
@@ -171,7 +171,7 @@ border-radius: 32px;
     /* padding-left: 240px; */
 
     position: absolute;
-    width: 680px;
+    width: auto;
     height: 67px;
     left: 240px;
     top: 885px;
@@ -185,13 +185,13 @@ body {
 .button-encriptar {
     /* Button */
 
-    display: flex;
+    /* display: flex; */
     flex-direction: row;
     align-items: flex-start;
-    padding: 24px;
+    /* padding: 30px; */
 
     position: static;
-    width: 328px;
+    width: 100%;
     height: 67px;
     left: 0px;
     top: 0px;
@@ -201,7 +201,7 @@ body {
 
     flex: none;
     order: 0;
-    flex-grow: 0;
+    /* flex-grow: 0; */
     /* margin: 0px 20px; */
 
 
@@ -212,7 +212,7 @@ body {
 #text-encriptar {
     /* TEXT */
     /* position: static; */
-    /* width: 280px; */
+    width: auto;
     height: 19px;
     text-align: center;
     /* left: 24px;
@@ -235,7 +235,7 @@ body {
     flex: none;
     order: 0;
     flex-grow: 1;
-    margin: 0px 8px;
+    /* margin: 0px 8px; */
 
 }
 
@@ -252,7 +252,7 @@ body {
     padding: 24px;
 
     position: static;
-    width: 328px;
+    width: 100%;
     height: 67px;
     left: 352px;
     top: 0px;
@@ -276,7 +276,7 @@ body {
 
 #text-desencriptar {
     position: static;
-    width: 280px;
+    width: 100%;
     height: 19px;
     left: 25px;
     top: 24px;
@@ -387,7 +387,7 @@ top: 885px; */
     }
 
     #entrada {
-        width: 600px;
+        width: 80%;
         height: 200px;
         color: #0A3871;
         background: #E5E5E5;
@@ -410,12 +410,12 @@ top: 885px; */
 
     .txtAreaOut {
         position: absolute;
-        width: 665px;
+        width: 80%;
         height: 133px;
-        left: 40px;
+        left: 25px;
         top: 620px;
         bottom: 20px;
-        margin: 5px 0px;
+        /* margin: 5px 0px; */
         padding-top: 20px;
         background: #FFFFFF;
         box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
@@ -521,14 +521,14 @@ top: 885px; */
 
 
     .botones {
-        display: flex;
+        /* display: flex; */
         flex-direction: column;
         align-items: flex-start;
         padding: 0px;
-        /* margin: auto; */
+        margin: auto;
         /* padding-left: 240px; */
 
-        position: absolute;
+        /* position: absolute; */
         /* width: 200px;
         height: 67px; */
         left: 16px;
@@ -536,24 +536,12 @@ top: 885px; */
     }
 
     .button-encriptar {
-        /* Button */
-
       
         position: static;
-        width: 343px;
+        width: 100%;
         height: 67px;
         left: 0px;
         top: 0px;
-
-        background: #0A3871;
-        border-radius: 24px;
-
-        flex: none;
-        order: 0;
-        flex-grow: 0;
-        /* margin: 0px 20px; */
-
-
 
 
     }
@@ -600,7 +588,7 @@ top: 885px; */
         position: absolute;
         width: 19rem;
         height: 200px;
-        left: 40px;
+        /* left: 40px; */
         top: 700px;
         bottom: 50px;
         margin: 5px 0px;
