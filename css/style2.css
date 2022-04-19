@@ -615,19 +615,17 @@ top: 885px; */
         flex-direction: row;
         align-items: flex-start;
         padding: 24px 0px 0px 20px;
-
         position: absolute;
         width: 250px;
+        margin-top: 50px;
         height: 67px;
-        left: 40px;
-        top: 150px;
+        /* left: 40px; */
         background: #FFFFFF;
-
-        /* Dark blue/dark-blue-300 */
-
         border: 1px solid #0A3871;
         box-sizing: border-box;
         border-radius: 24px;
+        
+        
     }
 
     /* .footer {
