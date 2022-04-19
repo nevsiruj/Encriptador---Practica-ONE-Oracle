@@ -21,9 +21,6 @@ function ocultar () {
 
 }
 
-// muñeco.classList.add("invisible");
-// muñeco.classList.remove("invisible");
-
 var cReplace = {
     'e': 'enter',
     'i': 'imes',
@@ -32,21 +29,21 @@ var cReplace = {
     'u': 'ufat'
   }
 
-function encriptar(txt) {
+// function encriptar(txt) {
 
-    switch (txt) {
-        case "e":
-            str= cReplace.e;
-            break;
-        case "i":
-            str= cReplace.i;
-            break;
-        case "a":
-            str= cReplace.a;
-            break;
-      }
+//     switch (txt) {
+//         case "e":
+//             str= cReplace.e;
+//             break;
+//         case "i":
+//             str= cReplace.i;
+//             break;
+//         case "a":
+//             str= cReplace.a;
+//             break;
+//       }
 
-      return str ;
+//       return str ;
 
 
     // if (txt == "a") {
@@ -58,21 +55,19 @@ function encriptar(txt) {
     // } else {
     //     return "";
     // }
-}
+// }
 // function uiEncriptar(ev) {
 //     salida.value = encriptar(entrada.value)
 //     console.log(salida.value)
 //   }
 
-function uiEncriptar2 (){
+function uiEncriptar (){
     ocultar();
     var texto = document.querySelector("#entrada").value;
+   
     var textoCifrado = texto.replace(/e/gi, "enter").replace(/i/gi, "imes").replace(/a/gi, "ai").replace(/o/gi, "ober").replace(/u/gi, "ufat");
     document.getElementById("txt2").textContent = textoCifrado;
-    console.log(textoCifrado);
 
-    // document.querySelector(".text-input-salida").value = textoCifrado;
-    // document.querySelector("#input-texto").value;
 }
 
 
@@ -104,6 +99,8 @@ function uiDesencriptar () {
 
 function copyToClipBoard() {
     /* Get the text field */
+    var entrada  = document.querySelector("#entrada");
+    entrada.value = "";
     var copyText = document.getElementById("txt2");
   
     console.log(copyText);
