@@ -590,6 +590,7 @@ top: 885px; */
     }
 
     .txtAreaOut {
+        width: 90%;
         position: absolute;
         height: 200px;
         /* left: 40px; */
