@@ -1,6 +1,7 @@
 
 const entrada = document.querySelector('#entrada')
 const salida = document.querySelector('#txt2')
+entrada.focus();
 
 // Desaparecer elementos
 
