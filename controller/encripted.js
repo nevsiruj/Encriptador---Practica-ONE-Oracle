@@ -1,8 +1,4 @@
 
-  
-
-// window.uiDesencriptar = uiDesencriptar
-// window.uiEncriptar = uiEncriptar
 const entrada = document.querySelector('#entrada')
 const salida = document.querySelector('#txt2')
 
@@ -21,63 +17,29 @@ function ocultar () {
 
 }
 
-var cReplace = {
-    'e': 'enter',
-    'i': 'imes',
-    'a': 'ai',
-    'o': 'ober',
-    'u': 'ufat'
-  }
-
-// function encriptar(txt) {
-
-//     switch (txt) {
-//         case "e":
-//             str= cReplace.e;
-//             break;
-//         case "i":
-//             str= cReplace.i;
-//             break;
-//         case "a":
-//             str= cReplace.a;
-//             break;
-//       }
-
-//       return str ;
-
-
-    // if (txt == "a") {
-    //     txt = entrada.value;
-    //     str = cReplace.a;
-    //     console.log(txt + "s")
-
-    //     return str;
-    // } else {
-    //     return "";
-    // }
-// }
-// function uiEncriptar(ev) {
-//     salida.value = encriptar(entrada.value)
-//     console.log(salida.value)
-//   }
-
-function uiEncriptar (){
-    ocultar();
-    var texto = document.querySelector("#entrada").value;
-   
-    var textoCifrado = texto.replace(/e/gi, "enter").replace(/i/gi, "imes").replace(/a/gi, "ai").replace(/o/gi, "ober").replace(/u/gi, "ufat");
-    document.getElementById("txt2").textContent = textoCifrado;
-
+// Convertir a LowerCase
+const lowerCaseCorrection = (str) => {
+    return str.toLowerCase();
 }
 
+// Remover acentos
+const removeAccents = (str) => {
+    return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  } 
 
-// function uiEncriptar(e){
+//  Encriptar Texto
+function uiEncriptar (){
+    ocultar();
+    let texto = document.querySelector("#entrada").value;
+    let textoV = document.getElementById("entrada");
+    let lowTexto = lowerCaseCorrection(texto);
+    let cadena = removeAccents(lowTexto);
+    textoV.value = cadena;
+    let textoCifrado = cadena.replace(/e/gi, "enter").replace(/i/gi, "imes").replace(/a/gi, "ai").replace(/o/gi, "ober").replace(/u/gi, "ufat");
+    document.getElementById("txt2").textContent = textoCifrado;
+}
 
-//     document.getElementById("txt2").textContent =  encriptar(entrada.value);
-//     console.log(entrada.value);
-    
-// }
-
+// Desencriptar
 function uiDesencriptar () {
     ocultar();
     var texto = document.querySelector("#entrada").value;
@@ -85,33 +47,16 @@ function uiDesencriptar () {
     document.getElementById("txt2").textContent = textoCifrado;
 }
 
-
-// function copyToClipBoard() {
-
-//     var content = document.getElementById('#txt2');
-    
-//     content.select();
-//     document.execCommand('copy');
-
-//     alert("Copied!");
-// }
-
-
+// Copiar al portapapeles
 function copyToClipBoard() {
-    /* Get the text field */
-    var entrada  = document.querySelector("#entrada");
+    let entrada  = document.querySelector("#entrada");
     entrada.value = "";
+
     var copyText = document.getElementById("txt2");
   
     console.log(copyText);
-    /* Select the text field */
     copyText.select();
     copyText.setSelectionRange(0, 99999); 
-    /* For mobile devices */
   
-     /* Copy the text inside the text field */
     navigator.clipboard.writeText(copyText.value);
-  
-    /* Alert the copied text */
-    // alert("Copied the text: " + copyText.value);
   }
